@@ -17,7 +17,7 @@ const Info = ({ data }) => {
       </div>
       <div>
         <h2>TIMEZONE</h2>
-        <p>UTC {data?.location?.timezone}</p>
+        <p>UTC: {data?.location?.timezone}</p>
       </div>
       <div>
         <h2>ISP</h2>
