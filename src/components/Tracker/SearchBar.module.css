@@ -1,0 +1,67 @@
+.image {
+  height: 15rem;
+  background: #ffffff url("../../images/pattern-bg-desktop.png") no-repeat right
+    top;
+  background-size: cover;
+  overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 20rem;
+  }
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+}
+
+.control div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+}
+
+.control label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.control input {
+  width: 80%;
+  max-width: 30rem;
+  padding: 1rem;
+  border: none;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.control input::after {
+  content: "";
+  width: 2rem;
+  background-color: #000;
+}
+
+.control input:focus {
+  outline: none;
+}
+
+.control button {
+  background-color: #000;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  line-height: 1;
+}
