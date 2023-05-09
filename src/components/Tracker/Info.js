@@ -11,9 +11,7 @@ const Info = ({ data }) => {
       </div>
       <div>
         <h2>LOCATION</h2>
-        <p>
-          {data?.location?.region}, {data?.location?.country}
-        </p>
+        <p>{data?.location?.country}</p>
       </div>
       <div>
         <h2>TIMEZONE</h2>
