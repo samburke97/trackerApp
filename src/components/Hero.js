@@ -2,7 +2,7 @@ import styles from "./Hero.module.css";
 import SearchBar from "./SearchBar";
 import Info from "./Info";
 
-const Search = ({ data, onChange, value }) => {
+const Hero = ({ data, onChange, value }) => {
   return (
     <header className={styles.header}>
       <div className={styles.content}>
@@ -13,4 +13,4 @@ const Search = ({ data, onChange, value }) => {
   );
 };
 
-export default Search;
+export default Hero;
