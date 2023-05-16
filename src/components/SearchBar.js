@@ -1,4 +1,4 @@
-import { ReactComponent as Icon } from "../../images/icon-arrow.svg";
+import { ReactComponent as Icon } from "../images/icon-arrow.svg";
 import styles from "./SearchBar.module.css";
 
 const SearchBar = ({ onChange, value }) => {

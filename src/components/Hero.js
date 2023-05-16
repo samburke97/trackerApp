@@ -1,4 +1,4 @@
-import styles from "./Search.module.css";
+import styles from "./Hero.module.css";
 import SearchBar from "./SearchBar";
 import Info from "./Info";
 

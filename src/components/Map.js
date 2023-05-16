@@ -3,8 +3,8 @@ import L from "leaflet";
 import styles from "./Map.module.css";
 
 const myIcon = new L.Icon({
-  iconUrl: require("../../images/location.svg").default,
-  iconRetinaUrl: require("../../images/location.svg").default,
+  iconUrl: require("../images/location.svg").default,
+  iconRetinaUrl: require("../images/location.svg").default,
   popupAnchor: [-0, -0],
   iconSize: [32, 40],
 });

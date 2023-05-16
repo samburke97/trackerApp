@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Map from "../components/Tracker/Map";
-import Hero from "../components/Tracker/Hero";
+import Map from "../components/Map";
+import Hero from "../components/Hero";
 
 const apiKey = "at_8sYmaM9D3sksMmAkiDayufxTF1wOC";
 
