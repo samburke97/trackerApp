@@ -3,8 +3,8 @@ import L from "leaflet";
 import styles from "./Map.module.css";
 
 const myIcon = new L.Icon({
-  iconUrl: require("../../images/icon-location.svg").default,
-  iconRetinaUrl: require("../../images/icon-location.svg").default,
+  iconUrl: require("../../images/location.svg").default,
+  iconRetinaUrl: require("../../images/location.svg").default,
   popupAnchor: [-0, -0],
   iconSize: [32, 40],
 });
@@ -17,9 +17,9 @@ const Map = ({ position }) => {
       center={position}
       className={styles.map}
     >
-      <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
+      <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
       <Marker position={position} icon={myIcon}>
-        <Popup>Here's the host</Popup>
+        <Popup className={styles.popup}>Here's the host</Popup>
       </Marker>
     </MapContainer>
   );

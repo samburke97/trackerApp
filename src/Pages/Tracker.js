@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Map from "../components/Tracker/Map";
-import SearchBar from "../components/Tracker/SearchBar";
+import Hero from "../components/Tracker/Hero";
 
-const apiKey = "at_gBSMAFD62xGqcyrmyUTwlyhjUsmXX";
+const apiKey = "at_8sYmaM9D3sksMmAkiDayufxTF1wOC";
 
 const Tracker = () => {
   const [enteredSearch, setEnteredSearch] = useState("");
@@ -75,11 +75,7 @@ const Tracker = () => {
   return (
     <>
       <form onSubmit={handleSubmission}>
-        <SearchBar
-          onChange={inputChangeHandler}
-          value={enteredSearch}
-          data={data}
-        />
+        <Hero onChange={inputChangeHandler} value={enteredSearch} data={data} />
       </form>
       {position.length > 0 && <Map position={position} />}
     </>

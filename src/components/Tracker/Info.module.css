@@ -1,21 +1,31 @@
 .content {
   display: flex;
-  width: 90%;
-  max-width: 70rem;
-  margin: 2rem auto;
-  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   color: #000;
-  z-index: 100;
 }
 
 .content > div {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
-  width: 100%;
-  border-right: 1px solid #000;
   font-weight: 500;
-  text-align: left;
+  border-right: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .content > div {
+    width: 40%;
+    padding: 0;
+    text-align: center;
+    border: none;
+  }
 }
 
 .content > div:last-of-type {
@@ -24,22 +34,6 @@
 
 .content > div > h2 {
   margin-bottom: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--dark-grey);
-}
-
-.content > div > h2,
-.content > div > p {
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
-  .content > div {
-    padding: 1rem 0;
-    margin: 0rem;
-    border: none;
-  }
 }

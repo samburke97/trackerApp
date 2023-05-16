@@ -1,10 +1,8 @@
-import Card from "../UI/Card";
 import styles from "./Info.module.css";
 
 const Info = ({ data }) => {
-  console.log(data);
   return (
-    <Card className={styles.content}>
+    <div className={styles.content}>
       <div>
         <h2>IP ADDRESS</h2>
         <p>{data?.ip}</p>
@@ -21,7 +19,7 @@ const Info = ({ data }) => {
         <h2>ISP</h2>
         <p>{data?.isp}</p>
       </div>
-    </Card>
+    </div>
   );
 };
 
