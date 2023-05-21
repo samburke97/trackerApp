@@ -10,5 +10,6 @@ https://strong-buttercream-af59d9.netlify.app/
 
 - React.js
 - CSS Modules
+- Typescript
 - Leaflet & Ipify API
 - Hosted on Netlify
