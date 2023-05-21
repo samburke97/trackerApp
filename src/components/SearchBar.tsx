@@ -1,7 +1,10 @@
 import { ReactComponent as Icon } from "../images/icon-arrow.svg";
 import styles from "./SearchBar.module.css";
 
-const SearchBar = ({ onChange, value }) => {
+const SearchBar: React.FC<{
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+}> = ({ onChange, value }) => {
   return (
     <div className={styles.control}>
       <label htmlFor="ip">

@@ -9,16 +9,19 @@ const myIcon = new L.Icon({
   iconSize: [32, 40],
 });
 
-const Map = ({ position }) => {
+const Map: React.FC<{
+  position: number[];
+}> = ({ position }) => {
+  const positionTuple: L.LatLngTuple = [position[0], position[1]];
   return (
     <MapContainer
       key={position.toString()}
       zoom={8}
-      center={position}
+      center={positionTuple}
       className={styles.map}
     >
       <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
-      <Marker position={position} icon={myIcon}>
+      <Marker position={positionTuple} icon={myIcon}>
         <Popup className={styles.popup}>Here's the host</Popup>
       </Marker>
     </MapContainer>

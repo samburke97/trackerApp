@@ -1,8 +1,13 @@
-import styles from "./Hero.module.css";
 import SearchBar from "./SearchBar";
 import Info from "./Info";
+import styles from "./Hero.module.css";
+import ApiResponse from "../models/api";
 
-const Hero = ({ data, onChange, value }) => {
+const Hero: React.FC<{
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+  data: ApiResponse;
+}> = ({ data, onChange, value }) => {
   return (
     <header className={styles.header}>
       <div className={styles.content}>

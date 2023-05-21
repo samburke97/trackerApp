@@ -1,13 +1,22 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import Map from "../components/Map";
 import Hero from "../components/Hero";
+import ApiResponse from "../models/api";
 
 const apiKey = "at_8sYmaM9D3sksMmAkiDayufxTF1wOC";
 
-const Tracker = () => {
-  const [enteredSearch, setEnteredSearch] = useState("");
-  const [position, setPosition] = useState([]);
-  const [data, setData] = useState([]);
+const Tracker: React.FC = () => {
+  const [enteredSearch, setEnteredSearch] = useState<string>("");
+  const [position, setPosition] = useState<number[]>([]);
+  const [data, setData] = useState<ApiResponse>({
+    location: {
+      country: "",
+      timezone: "",
+    },
+    ip: "",
+    isp: "",
+  });
 
   useEffect(() => {
     //Produces a more accurate marker
@@ -27,17 +36,18 @@ const Tracker = () => {
       })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setData(data);
         setPosition([data?.location?.lat, data?.location?.lng]);
       })
       .catch((err) => console.error(err));
   }, []);
 
-  const inputChangeHandler = (event) => {
+  const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredSearch(event.target.value);
   };
 
-  const handleSubmission = async (event) => {
+  const handleSubmission = async (event: React.FormEvent) => {
     event.preventDefault();
 
     const userInput = enteredSearch;

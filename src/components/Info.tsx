@@ -1,6 +1,9 @@
+import ApiResponse from "../models/api";
 import styles from "./Info.module.css";
 
-const Info = ({ data }) => {
+const Info: React.FC<{
+  data: ApiResponse;
+}> = ({ data }) => {
   return (
     <div className={styles.content}>
       <div>
